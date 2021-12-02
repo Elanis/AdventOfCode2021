@@ -16,10 +16,16 @@ let dec01_02 =
 
 // Dec 02 - 1
 let dec02_01 =
-    let fileContent = System.IO.File.ReadLines("data/Dec02_01.txt")
+    let fileContent = System.IO.File.ReadLines("data/Dec02.txt")
     Console.WriteLine("Dec02_01: {0}", Dec02_01.processAll (List.ofSeq(fileContent)) 0 0)
+
+// Dec 02 - 2
+let dec02_02 =
+    let fileContent = System.IO.File.ReadLines("data/Dec02.txt")
+    Console.WriteLine("Dec02_02: {0}", Dec02_02.processAll (List.ofSeq(fileContent)) 0 0 0)
 
 // Execute
 dec01_01
 dec01_02
 dec02_01
+dec02_02

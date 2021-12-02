@@ -13,5 +13,10 @@ let ``Dec01_02_Test`` () =
 
 [<Fact>]
 let ``Dec02_01_Test`` () =
-    let fileContent = System.IO.File.ReadLines("data/Dec02_01.txt")
+    let fileContent = System.IO.File.ReadLines("data/Dec02.txt")
     Assert.Equal(Dec02_01.processAll (List.ofSeq(fileContent)) 0 0, (10, 15))
+
+[<Fact>]
+let ``Dec02_02_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec02.txt")
+    Assert.Equal(Dec02_02.processAll (List.ofSeq(fileContent)) 0 0 0, (60, 15))
