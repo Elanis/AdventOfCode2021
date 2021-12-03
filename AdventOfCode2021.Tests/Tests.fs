@@ -25,3 +25,8 @@ let ``Dec02_02_Test`` () =
 let ``Dec03_01_Test`` () =
     let fileContent = System.IO.File.ReadLines("data/Dec03.txt")
     Assert.Equal(Dec03_01.getConsumption (List.ofSeq(fileContent)), (22, 9))
+
+[<Fact>]
+let ``Dec03_02_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec03.txt")
+    Assert.Equal(Dec03_02.getAtmosphereRating (List.ofSeq(fileContent)), (23, 10))

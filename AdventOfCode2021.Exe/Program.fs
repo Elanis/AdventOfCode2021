@@ -29,9 +29,15 @@ let dec03_01 =
     let fileContent = System.IO.File.ReadLines("data/Dec03.txt")
     Console.WriteLine("Dec03_01: {0}", Dec03_01.getConsumption (List.ofSeq(fileContent)))
 
+// Dec 03 - 2
+let dec03_02 =
+    let fileContent = System.IO.File.ReadLines("data/Dec03.txt")
+    Console.WriteLine("Dec03_02: {0}", Dec03_02.getAtmosphereRating (List.ofSeq(fileContent)))
+
 // Execute
 dec01_01
 dec01_02
 dec02_01
 dec02_02
 dec03_01
+dec03_02
