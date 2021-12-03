@@ -20,3 +20,8 @@ let ``Dec02_01_Test`` () =
 let ``Dec02_02_Test`` () =
     let fileContent = System.IO.File.ReadLines("data/Dec02.txt")
     Assert.Equal(Dec02_02.processAll (List.ofSeq(fileContent)) 0 0 0, (60, 15))
+
+[<Fact>]
+let ``Dec03_01_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec03.txt")
+    Assert.Equal(Dec03_01.getConsumption (List.ofSeq(fileContent)), (22, 9))
