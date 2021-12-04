@@ -35,3 +35,8 @@ let ``Dec03_02_Test`` () =
 let ``Dec04_01_Test`` () =
     let fileContent = System.IO.File.ReadLines("data/Dec04.txt")
     Assert.Equal(Dec04_01.computeScore (List.ofSeq(fileContent)), 4512)
+
+[<Fact>]
+let ``Dec04_02_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec04.txt")
+    Assert.Equal(Dec04_02.computeScore (List.ofSeq(fileContent)), 1924)
