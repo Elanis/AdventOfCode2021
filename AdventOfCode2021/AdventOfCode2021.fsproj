@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
@@ -6,6 +6,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<Compile Include="Dec05_01.fs" />
 		<Compile Include="Dec04_01.fs" />
 		<Compile Include="Dec04_02.fs" />
 		<Compile Include="Dec03_02.fs" />
