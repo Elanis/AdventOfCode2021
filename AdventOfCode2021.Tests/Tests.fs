@@ -45,3 +45,8 @@ let ``Dec04_02_Test`` () =
 let ``Dec05_01_Test`` () =
     let fileContent = System.IO.File.ReadLines("data/Dec05.txt")
     Assert.Equal(Dec05_01.countOverlap (List.ofSeq(fileContent)), 5)
+
+[<Fact>]
+let ``Dec05_02_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec05.txt")
+    Assert.Equal(Dec05_02.countOverlap (List.ofSeq(fileContent)), 12)

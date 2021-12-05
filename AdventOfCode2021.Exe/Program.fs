@@ -1,4 +1,4 @@
-open System
+﻿open System
 open System.Linq
 open AdventOfCode2021
 
@@ -49,6 +49,11 @@ let dec05_01 =
     let fileContent = System.IO.File.ReadLines("data/Dec05.txt")
     Console.WriteLine("Dec05_01: {0}", Dec05_01.countOverlap (List.ofSeq(fileContent)))
 
+// Dec 05 - 2
+let dec05_02 =
+    let fileContent = System.IO.File.ReadLines("data/Dec05.txt")
+    Console.WriteLine("Dec05_02: {0}", Dec05_02.countOverlap (List.ofSeq(fileContent)))
+
 // Execute
 dec01_01
 dec01_02
@@ -59,3 +64,4 @@ dec03_02
 dec04_01
 dec04_02
 dec05_01
+dec05_02
