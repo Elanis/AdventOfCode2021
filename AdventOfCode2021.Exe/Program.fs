@@ -59,10 +59,10 @@ let dec06_01 =
     let fileContent = System.IO.File.ReadLines("data/Dec06.txt")
     Console.WriteLine("Dec06_01: {0}", Dec06_01.countLanternFish (fileContent.First()) 80)
 
-// Dec 06 - 6
-let dec06_06 =
+// Dec 06 - 2
+let dec06_02 =
     let fileContent = System.IO.File.ReadLines("data/Dec06.txt")
-    Console.WriteLine("Dec06_02: {0}", Dec06_01.countLanternFish (fileContent.First()) 256)
+    Console.WriteLine("Dec06_02: {0}", Dec06_02.countLanternFish (fileContent.First()) 256)
 
 // Execute
 dec01_01
@@ -76,3 +76,4 @@ dec04_02
 dec05_01
 dec05_02
 dec06_01
+dec06_02

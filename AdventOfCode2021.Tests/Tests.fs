@@ -3,6 +3,7 @@ module Tests
 open System.Linq
 open Xunit
 open AdventOfCode2021
+open System
 
 [<Fact>]
 let ``Dec01_01_Test`` () =
@@ -57,3 +58,10 @@ let ``Dec06_01_Test`` () =
     let fileContent = System.IO.File.ReadLines("data/Dec06.txt")
     Assert.Equal(Dec06_01.countLanternFish (fileContent.First()) 18, 26)
     Assert.Equal(Dec06_01.countLanternFish (fileContent.First()) 80, 5934)
+
+[<Fact>]
+let ``Dec06_02_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec06.txt")
+    Assert.Equal(Dec06_02.countLanternFish (fileContent.First()) 18, 26)
+    Assert.Equal(Dec06_02.countLanternFish (fileContent.First()) 80, 5934)
+    Assert.Equal(Dec06_02.countLanternFish (fileContent.First()) 256, Int64.Parse("26984457539"))
