@@ -54,6 +54,16 @@ let dec05_02 =
     let fileContent = System.IO.File.ReadLines("data/Dec05.txt")
     Console.WriteLine("Dec05_02: {0}", Dec05_02.countOverlap (List.ofSeq(fileContent)))
 
+// Dec 06 - 1
+let dec06_01 =
+    let fileContent = System.IO.File.ReadLines("data/Dec06.txt")
+    Console.WriteLine("Dec06_01: {0}", Dec06_01.countLanternFish (fileContent.First()) 80)
+
+// Dec 06 - 6
+let dec06_06 =
+    let fileContent = System.IO.File.ReadLines("data/Dec06.txt")
+    Console.WriteLine("Dec06_02: {0}", Dec06_01.countLanternFish (fileContent.First()) 256)
+
 // Execute
 dec01_01
 dec01_02
@@ -65,3 +75,4 @@ dec04_01
 dec04_02
 dec05_01
 dec05_02
+dec06_01

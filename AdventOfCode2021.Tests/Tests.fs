@@ -1,5 +1,6 @@
 module Tests
 
+open System.Linq
 open Xunit
 open AdventOfCode2021
 
@@ -50,3 +51,9 @@ let ``Dec05_01_Test`` () =
 let ``Dec05_02_Test`` () =
     let fileContent = System.IO.File.ReadLines("data/Dec05.txt")
     Assert.Equal(Dec05_02.countOverlap (List.ofSeq(fileContent)), 12)
+
+[<Fact>]
+let ``Dec06_01_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec06.txt")
+    Assert.Equal(Dec06_01.countLanternFish (fileContent.First()) 18, 26)
+    Assert.Equal(Dec06_01.countLanternFish (fileContent.First()) 80, 5934)
