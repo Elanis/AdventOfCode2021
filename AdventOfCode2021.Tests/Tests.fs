@@ -75,3 +75,8 @@ let ``Dec07_01_Test`` () =
 let ``Dec07_02_Test`` () =
     let fileContent = System.IO.File.ReadLines("data/Dec07.txt")
     Assert.Equal(Dec07_02.getMinimumFuelForAlignment (fileContent.First()), 168)
+
+[<Fact>]
+let ``Dec08_01_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec08.txt")
+    Assert.Equal(Dec08_01.getUniqueDigitsAmount (List.ofSeq(fileContent)), 26)

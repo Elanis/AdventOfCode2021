@@ -74,6 +74,11 @@ let dec07_02 =
     let fileContent = System.IO.File.ReadLines("data/Dec07.txt")
     Console.WriteLine("Dec07_02: {0}", Dec07_02.getMinimumFuelForAlignment (fileContent.First()))
 
+// Dec 08 - 1
+let dec08_01 =
+    let fileContent = System.IO.File.ReadLines("data/Dec08.txt")
+    Console.WriteLine("Dec08_01: {0}", Dec08_01.getUniqueDigitsAmount (List.ofSeq(fileContent)))
+
 // Execute
 dec01_01
 dec01_02
@@ -89,3 +94,4 @@ dec06_01
 dec06_02
 dec07_01
 dec07_02
+dec08_01

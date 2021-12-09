@@ -8,6 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="data\Dec08.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="data\Dec07.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
