@@ -65,3 +65,8 @@ let ``Dec06_02_Test`` () =
     Assert.Equal(Dec06_02.countLanternFish (fileContent.First()) 18, 26)
     Assert.Equal(Dec06_02.countLanternFish (fileContent.First()) 80, 5934)
     Assert.Equal(Dec06_02.countLanternFish (fileContent.First()) 256, Int64.Parse("26984457539"))
+
+[<Fact>]
+let ``Dec07_01_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec07.txt")
+    Assert.Equal(Dec07_01.getMinimumFuelForAlignment (fileContent.First()), 37)

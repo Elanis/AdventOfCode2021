@@ -10,6 +10,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="data\Dec07.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\Dec06.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
