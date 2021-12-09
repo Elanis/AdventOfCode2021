@@ -90,3 +90,8 @@ let ``Dec08_02_Test`` () =
 let ``Dec09_01_Test`` () =
     let fileContent = System.IO.File.ReadLines("data/Dec09.txt")
     Assert.Equal(Dec09_01.calcGlobalRiskLevel (List.ofSeq(fileContent)), 15)
+
+[<Fact>]
+let ``Dec09_02_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec09.txt")
+    Assert.Equal(Dec09_02.threeLargestBassins (List.ofSeq(fileContent)), 1134)
