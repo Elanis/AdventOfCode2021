@@ -80,3 +80,8 @@ let ``Dec07_02_Test`` () =
 let ``Dec08_01_Test`` () =
     let fileContent = System.IO.File.ReadLines("data/Dec08.txt")
     Assert.Equal(Dec08_01.getUniqueDigitsAmount (List.ofSeq(fileContent)), 26)
+
+[<Fact>]
+let ``Dec08_02_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec08.txt")
+    Assert.Equal(Dec08_02.sumAllValues (List.ofSeq(fileContent)), 61229)

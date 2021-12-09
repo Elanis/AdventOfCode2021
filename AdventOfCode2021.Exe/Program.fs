@@ -79,6 +79,11 @@ let dec08_01 =
     let fileContent = System.IO.File.ReadLines("data/Dec08.txt")
     Console.WriteLine("Dec08_01: {0}", Dec08_01.getUniqueDigitsAmount (List.ofSeq(fileContent)))
 
+// Dec 08 - 2
+let dec08_02 =
+    let fileContent = System.IO.File.ReadLines("data/Dec08.txt")
+    Console.WriteLine("Dec08_02: {0}", Dec08_02.sumAllValues (List.ofSeq(fileContent)))
+
 // Execute
 dec01_01
 dec01_02
@@ -95,3 +100,4 @@ dec06_02
 dec07_01
 dec07_02
 dec08_01
+dec08_02
