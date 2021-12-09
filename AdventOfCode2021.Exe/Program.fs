@@ -84,6 +84,11 @@ let dec08_02 =
     let fileContent = System.IO.File.ReadLines("data/Dec08.txt")
     Console.WriteLine("Dec08_02: {0}", Dec08_02.sumAllValues (List.ofSeq(fileContent)))
 
+// Dec 09 - 1
+let dec09_01 =
+    let fileContent = System.IO.File.ReadLines("data/Dec09.txt")
+    Console.WriteLine("Dec09_01: {0}", Dec09_01.calcGlobalRiskLevel (List.ofSeq(fileContent)))
+
 // Execute
 dec01_01
 dec01_02
@@ -101,3 +106,4 @@ dec07_01
 dec07_02
 dec08_01
 dec08_02
+dec09_01

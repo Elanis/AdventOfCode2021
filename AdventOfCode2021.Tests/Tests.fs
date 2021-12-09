@@ -85,3 +85,8 @@ let ``Dec08_01_Test`` () =
 let ``Dec08_02_Test`` () =
     let fileContent = System.IO.File.ReadLines("data/Dec08.txt")
     Assert.Equal(Dec08_02.sumAllValues (List.ofSeq(fileContent)), 61229)
+
+[<Fact>]
+let ``Dec09_01_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec09.txt")
+    Assert.Equal(Dec09_01.calcGlobalRiskLevel (List.ofSeq(fileContent)), 15)
