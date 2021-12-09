@@ -70,3 +70,8 @@ let ``Dec06_02_Test`` () =
 let ``Dec07_01_Test`` () =
     let fileContent = System.IO.File.ReadLines("data/Dec07.txt")
     Assert.Equal(Dec07_01.getMinimumFuelForAlignment (fileContent.First()), 37)
+
+[<Fact>]
+let ``Dec07_02_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec07.txt")
+    Assert.Equal(Dec07_02.getMinimumFuelForAlignment (fileContent.First()), 168)

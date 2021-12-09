@@ -69,6 +69,11 @@ let dec07_01 =
     let fileContent = System.IO.File.ReadLines("data/Dec07.txt")
     Console.WriteLine("Dec07_01: {0}", Dec07_01.getMinimumFuelForAlignment (fileContent.First()))
 
+// Dec 07 - 2
+let dec07_02 =
+    let fileContent = System.IO.File.ReadLines("data/Dec07.txt")
+    Console.WriteLine("Dec07_02: {0}", Dec07_02.getMinimumFuelForAlignment (fileContent.First()))
+
 // Execute
 dec01_01
 dec01_02
@@ -83,3 +88,4 @@ dec05_02
 dec06_01
 dec06_02
 dec07_01
+dec07_02
