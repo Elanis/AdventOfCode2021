@@ -22,13 +22,13 @@ module Dec10_01 =
 
     let rec getFirstIllegalCharacter_Internal (charList : char list) (heap : char list) =
         match charList with
-            | [] -> ' '
+            | [] -> (' ', heap)
             | (head::tail) -> 
                 if isEndingChar head then
                     let (heapHead::heapTail) = heap
                     if heapHead = head then
                         getFirstIllegalCharacter_Internal tail heapTail
-                    else head
+                    else (head, heap)
                 else
                     getFirstIllegalCharacter_Internal tail ((getMatchingEndChar head)::heap)
 
@@ -36,7 +36,8 @@ module Dec10_01 =
         getFirstIllegalCharacter_Internal (List.ofSeq(line.ToCharArray())) []
 
     // SCORE
-    let getCharScore (currentChar : char) =
+    let getCharScore (illegalChar : (char * (char list))) =
+        let ((currentChar, heap)) = illegalChar
         match currentChar with
             | ')' -> 3
             | ']' -> 57
