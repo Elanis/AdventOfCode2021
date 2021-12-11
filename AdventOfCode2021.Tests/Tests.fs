@@ -117,3 +117,8 @@ let ``Dec11b_01_Test`` () =
     let fileContent = System.IO.File.ReadLines("data/Dec11b.txt")
     Assert.Equal(Dec11_01.countFlashes (List.ofSeq(fileContent)) 10, 204)
     Assert.Equal(Dec11_01.countFlashes (List.ofSeq(fileContent)) 100, 1656)
+
+[<Fact>]
+let ``Dec11b_02_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec11b.txt")
+    Assert.Equal(Dec11_02.firstSyncFlash (List.ofSeq(fileContent)), 195)

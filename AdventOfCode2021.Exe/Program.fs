@@ -109,6 +109,11 @@ let dec11_01 =
     let fileContent = System.IO.File.ReadLines("data/Dec11.txt")
     Console.WriteLine("Dec11_01: {0}", Dec11_01.countFlashes (List.ofSeq(fileContent)) 100)
 
+// Dec 11 - 2
+let dec11_02 =
+    let fileContent = System.IO.File.ReadLines("data/Dec11.txt")
+    Console.WriteLine("Dec11_02: {0}", Dec11_02.firstSyncFlash (List.ofSeq(fileContent)))
+
 // Execute
 dec01_01
 dec01_02
@@ -131,3 +136,4 @@ dec09_02
 dec10_01
 dec10_02
 dec11_01
+dec11_02
