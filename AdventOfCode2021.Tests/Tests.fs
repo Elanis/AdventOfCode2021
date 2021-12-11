@@ -105,3 +105,15 @@ let ``Dec10_01_Test`` () =
 let ``Dec10_02_Test`` () =
     let fileContent = System.IO.File.ReadLines("data/Dec10.txt")
     Assert.Equal(Dec10_02.computeScore (List.ofSeq(fileContent)), 288957)
+
+[<Fact>]
+let ``Dec11a_01_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec11a.txt")
+    Assert.Equal(Dec11_01.countFlashes (List.ofSeq(fileContent)) 1, 9)
+    Assert.Equal(Dec11_01.countFlashes (List.ofSeq(fileContent)) 2, 9)
+
+[<Fact>]
+let ``Dec11b_01_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec11b.txt")
+    Assert.Equal(Dec11_01.countFlashes (List.ofSeq(fileContent)) 10, 204)
+    Assert.Equal(Dec11_01.countFlashes (List.ofSeq(fileContent)) 100, 1656)
