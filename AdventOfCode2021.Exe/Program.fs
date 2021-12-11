@@ -94,6 +94,11 @@ let dec09_02 =
     let fileContent = System.IO.File.ReadLines("data/Dec09.txt")
     Console.WriteLine("Dec09_02: {0}", Dec09_02.threeLargestBassins (List.ofSeq(fileContent)))
 
+// Dec 10 - 1
+let dec10_01 =
+    let fileContent = System.IO.File.ReadLines("data/Dec10.txt")
+    Console.WriteLine("Dec10_01: {0}", Dec10_01.computeScore (List.ofSeq(fileContent)))
+
 // Execute
 dec01_01
 dec01_02
@@ -113,3 +118,4 @@ dec08_01
 dec08_02
 dec09_01
 dec09_02
+dec10_01
