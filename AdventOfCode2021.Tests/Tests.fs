@@ -152,3 +152,8 @@ let ``Dec12b_02_Test`` () =
 let ``Dec12c_02_Test`` () =
     let fileContent = System.IO.File.ReadLines("data/Dec12c.txt")
     Assert.Equal(Dec12_02.countPaths (List.ofSeq(fileContent)), 3509)
+
+[<Fact>]
+let ``Dec13_01_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec13.txt")
+    Assert.Equal(Dec13_01.countPointsAfterFirstFold (List.ofSeq(fileContent)), 17)
