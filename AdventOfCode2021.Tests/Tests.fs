@@ -137,3 +137,18 @@ let ``Dec12b_01_Test`` () =
 let ``Dec12c_01_Test`` () =
     let fileContent = System.IO.File.ReadLines("data/Dec12c.txt")
     Assert.Equal(Dec12_01.countPaths (List.ofSeq(fileContent)), 226)
+
+[<Fact>]
+let ``Dec12a_02_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec12a.txt")
+    Assert.Equal(Dec12_02.countPaths (List.ofSeq(fileContent)), 36)
+
+[<Fact>]
+let ``Dec12b_02_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec12b.txt")
+    Assert.Equal(Dec12_02.countPaths (List.ofSeq(fileContent)), 103)
+
+[<Fact>]
+let ``Dec12c_02_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec12c.txt")
+    Assert.Equal(Dec12_02.countPaths (List.ofSeq(fileContent)), 3509)
