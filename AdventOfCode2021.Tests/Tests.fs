@@ -186,3 +186,10 @@ let ``Dec14_01_Test`` () =
     Assert.Equal(step10.Count(fun elt -> elt = 'N'), 865)
 
     Assert.Equal(Dec14_01.computeScore (List.ofSeq(fileContent)) 10, 1588)
+
+[<Fact>]
+let ``Dec14_02_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec14.txt")
+
+    Assert.Equal(Dec14_02.computeScore (List.ofSeq(fileContent)) 10, 1588)
+    Assert.Equal(Dec14_02.computeScore (List.ofSeq(fileContent)) 40, Int64.Parse("2188189693529"))
