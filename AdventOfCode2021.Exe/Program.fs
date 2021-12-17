@@ -134,6 +134,11 @@ let dec13_02 =
     let fileContent = System.IO.File.ReadLines("data/Dec13.txt")
     Console.WriteLine("Dec13_02:\n{0}", Dec13_02.getLetters (List.ofSeq(fileContent)))
 
+// Dec 14 - 1
+let dec14_01 =
+    let fileContent = System.IO.File.ReadLines("data/Dec14.txt")
+    Console.WriteLine("Dec14_01: {0}", Dec14_01.computeScore (List.ofSeq(fileContent)) 10)
+
 // Execute
 dec01_01
 dec01_02
@@ -161,3 +166,4 @@ dec12_01
 dec12_02
 dec13_01
 dec13_02
+dec14_01

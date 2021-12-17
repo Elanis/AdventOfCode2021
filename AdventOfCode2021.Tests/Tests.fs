@@ -168,3 +168,21 @@ let ``Dec13_02_Test`` () =
 #   #
 #####"
 )
+
+[<Fact>]
+let ``Dec14_01_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec14.txt")
+    Assert.Equal(Dec14_01.processPolymerSteps (List.ofSeq(fileContent)) 1, "NCNBCHB")
+    Assert.Equal(Dec14_01.processPolymerSteps (List.ofSeq(fileContent)) 2, "NBCCNBBBCBHCB")
+    Assert.Equal(Dec14_01.processPolymerSteps (List.ofSeq(fileContent)) 3, "NBBBCNCCNBBNBNBBCHBHHBCHB")
+    Assert.Equal(Dec14_01.processPolymerSteps (List.ofSeq(fileContent)) 4, "NBBNBNBBCCNBCNCCNBBNBBNBBBNBBNBBCBHCBHHNHCBBCBHCB")
+    Assert.Equal((Dec14_01.processPolymerSteps (List.ofSeq(fileContent)) 5).Length, 97)
+    
+    let step10 = (Dec14_01.processPolymerSteps (List.ofSeq(fileContent)) 10).ToCharArray()
+    Assert.Equal(step10.Length, 3073)
+    Assert.Equal(step10.Count(fun elt -> elt = 'B'), 1749)
+    Assert.Equal(step10.Count(fun elt -> elt = 'C'), 298)
+    Assert.Equal(step10.Count(fun elt -> elt = 'H'), 161)
+    Assert.Equal(step10.Count(fun elt -> elt = 'N'), 865)
+
+    Assert.Equal(Dec14_01.computeScore (List.ofSeq(fileContent)) 10, 1588)
