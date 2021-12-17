@@ -157,3 +157,14 @@ let ``Dec12c_02_Test`` () =
 let ``Dec13_01_Test`` () =
     let fileContent = System.IO.File.ReadLines("data/Dec13.txt")
     Assert.Equal(Dec13_01.countPointsAfterFirstFold (List.ofSeq(fileContent)), 17)
+
+[<Fact>]
+let ``Dec13_02_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec13.txt")
+    Assert.Equal(Dec13_02.getLetters (List.ofSeq(fileContent)),
+@"#####
+#   #
+#   #
+#   #
+#####"
+)
