@@ -193,3 +193,8 @@ let ``Dec14_02_Test`` () =
 
     Assert.Equal(Dec14_02.computeScore (List.ofSeq(fileContent)) 10, 1588)
     Assert.Equal(Dec14_02.computeScore (List.ofSeq(fileContent)) 40, Int64.Parse("2188189693529"))
+
+[<Fact>]
+let ``Dec15_01_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec15.txt")
+    Assert.Equal(Dec15_01.calcMinimalRisk (List.ofSeq(fileContent)), 40)
