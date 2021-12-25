@@ -198,3 +198,21 @@ let ``Dec14_02_Test`` () =
 let ``Dec15_01_Test`` () =
     let fileContent = System.IO.File.ReadLines("data/Dec15.txt")
     Assert.Equal(Dec15_01.calcMinimalRisk (List.ofSeq(fileContent)), 40)
+
+[<Fact>]
+let ``Dec15_02_large_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec15.txt")
+    let calculated = Dec15_02.calcLargeMap (List.ofSeq(fileContent))
+
+    let fileContent2 = System.IO.File.ReadLines("data/Dec15_large.txt")
+    let expected = Dec15_01.parseMap (List.ofSeq(fileContent2))
+
+
+    Assert.Equal(calculated.Length, expected.Length);
+    Assert.Equal(calculated[0].Length, expected[0].Length);
+    Assert.Equal(calculated.Sum(fun elt -> elt.Sum()), expected.Sum(fun elt -> elt.Sum()));
+
+[<Fact>]
+let ``Dec15_02_risk_Test`` () =
+    let fileContent = System.IO.File.ReadLines("data/Dec15.txt")
+    Assert.Equal(Dec15_02.calcLargeMapMinimalRisk (List.ofSeq(fileContent)), 315)

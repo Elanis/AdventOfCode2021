@@ -33,7 +33,7 @@ module Dec15_01 =
                 let minNeighboursValue = getMinNeighboursValue scoresMap neighbours
 
                 let newValue = minNeighboursValue + map[y][x]
-                if scoresMap[y][x] = -1 || newValue < scoresMap[y][x] then
+                if map[y][x] <> -1 && (scoresMap[y][x] = -1 || newValue < scoresMap[y][x]) then
                     let newScoresMap = [
                         for i in 0 .. (map.Count() - 1) do [
                             for j in 0 .. (map[0].Count() - 1) do

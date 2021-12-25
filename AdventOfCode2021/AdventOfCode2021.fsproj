@@ -7,6 +7,7 @@
 
 	<ItemGroup>
 		<Compile Include="Dec15_01.fs" />
+		<Compile Include="Dec15_02.fs" />
 		<Compile Include="Dec14_01.fs" />
 		<Compile Include="Dec14_02.fs" />
 		<Compile Include="Dec13_01.fs" />

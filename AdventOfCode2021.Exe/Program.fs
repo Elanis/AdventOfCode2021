@@ -149,6 +149,11 @@ let dec15_01 =
     let fileContent = System.IO.File.ReadLines("data/Dec15.txt")
     Console.WriteLine("Dec15_01: {0}", Dec15_01.calcMinimalRisk (List.ofSeq(fileContent)))
 
+// Dec 15 - 2
+let dec15_02 =
+    let fileContent = System.IO.File.ReadLines("data/Dec15.txt")
+    Console.WriteLine("Dec15_02: {0}", Dec15_02.calcLargeMapMinimalRisk (List.ofSeq(fileContent)))
+
 // Execute
 dec01_01
 dec01_02
@@ -179,3 +184,4 @@ dec13_02
 dec14_01
 dec14_02
 dec15_01
+dec15_02
